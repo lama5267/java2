@@ -1,7 +1,14 @@
 package ru.progwards.java1.lessons.compare_if_cycles;
 
 public class CyclesGoldenFibo {
-
+    public static boolean containsDigit(int number, int digit){
+        boolean x = true;
+        if (number >=digit) {
+            x = false;
+        }
+        System.out.println("Результат: " + x);
+        return x;
+    }
     public static int fiboNumber(int n) {
 return n-3;
     }
