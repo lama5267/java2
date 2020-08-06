@@ -27,6 +27,5 @@ x=true;
     }
 
     public static void main(String[] args) {
-        maxSide(5,8,3);
     }
 }
