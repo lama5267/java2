@@ -14,23 +14,23 @@ public class TriangleInfo {
     public static boolean isRightTriangle(int a, int b, int c){
         System.out.println("Вызвана функция isTriangle с параметрами: " + a + ", " + b + ", " + c);
         boolean x = false;
-        if (a >= (b + c) | b >= (a+c) | c >= (a+b)) {
-            x = true;
+        if (a*a== (b*b)+(c*c) | b*b == (a*a)+(c*c) | c*c== (a*a)+(b*b)) {
+            x =true ;
         }
         System.out.println("Результат: " + x);
         return x;
     }
     public static boolean isIsoscelesTriangle(int a, int b, int c){
         System.out.println("Вызвана функция isTriangle с параметрами: " + a + ", " + b + ", " + c);
-        boolean x = true;
+        boolean x = false;
         if (a == b  | b == c | c == a) {
-            x = false;
+            x =true ;
         }
         System.out.println("Результат: " + x);
         return x;
     }
     public static void main(String[] args) {
-        isIsoscelesTriangle(3, 2, 4);
+        isRightTriangle(10, 8, 6);
 
     }
 }
