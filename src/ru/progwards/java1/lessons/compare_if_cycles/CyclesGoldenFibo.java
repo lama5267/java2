@@ -5,15 +5,19 @@ public class CyclesGoldenFibo {
         return Integer.toString(number).contains(Integer.toString(digit));
         }
     public static int fiboNumber(int n) {
-       int a = 0;
-    int b = 1;int x=15;
-        for (int i = 0; i < x; i++){
-            n = b + a;
-            a = b;
-            b = n;
-            System.out.println(a);
+        int x = 1;
+        int b = 0;
+        int d = 0;
+        for (int i = 1; i <= n; i++) {
+            d = x + b;
+            b = x;
+            x = d;
+            if (i == 1) {
+                b = 0;
+            }
         }
-        return n;}
+        return x;
+    }
     public static boolean isGoldenTriangle(int a, int b, int c){
         return (a == b & (double)a/c >= 1.61703d & (double)a/c <= 1.61903d | a == c & (double)a/b  >= 1.61703d & (double)a/b  <= 1.61903d | b == c & (double)b/a  >= 1.61703d & (double)b/a  <= 1.61903d);
     }
@@ -28,5 +32,6 @@ public class CyclesGoldenFibo {
                 }
             }
         }
-    }
+
+        }
 }
