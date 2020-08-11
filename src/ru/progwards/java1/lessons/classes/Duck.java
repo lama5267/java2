@@ -7,7 +7,7 @@ public class Duck extends Animal{
     }
 
     public AnimalKind getKind(){
-        return AnimalKind.Duck;
+        return AnimalKind.DUCK;
     }
     public FoodKind  getFoodKind(){
         return FoodKind.CORN ;
