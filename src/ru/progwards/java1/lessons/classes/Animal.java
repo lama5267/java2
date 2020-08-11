@@ -36,11 +36,11 @@ public class Animal {
         return vese;
     }
     public String toString() {
-        return "i am "+   getKind() + ","+" eat " + getFoodKind();
+        return "I am" +" "+ getKind() + ", eat" + " "+getFoodKind();
 
     }
     public String toStringFull() {
-        return "i am "+   getKind() + ","+" eat " + getFoodKind()+ calculateFoodWeight();
+        return "I am" +" " +getKind() + ", eat" + " "+getFoodKind() + " "+calculateFoodWeight();
     }
     }
 
