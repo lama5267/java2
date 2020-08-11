@@ -10,7 +10,7 @@ public class Animal {
         ANIMAL,
         COW,
         HAMSTER,
-        Duck;
+        Duck
 
     }
     public AnimalKind getKind(){
@@ -36,11 +36,11 @@ public class Animal {
         return vese;
     }
     public String toString() {
-        return "i am"+   getKind() + ","+"eat" + getFoodKind();
+        return "i am "+   getKind() + ","+" eat " + getFoodKind();
 
     }
     public String toStringFull() {
-        return "i am"+   getKind() + ","+"eat" + getFoodKind()+calculateFoodWeight();
+        return "i am "+   getKind() + ","+" eat " + getFoodKind()+ calculateFoodWeight();
     }
     }
 
