@@ -2,46 +2,54 @@ package ru.progwards.java1.lessons.classes;
 
 public class Animal {
     double weight;
-    public Animal(double weight){
 
-        this.weight=weight;
+    public Animal(double weight) {
+        this.weight = weight;
+
     }
-    public enum AnimalKind {
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public double getFoodCoeff() {
+        return 0.02;
+    }
+
+    enum AnimalKind {
         ANIMAL,
         COW,
         HAMSTER,
-        Duck
-
+        DUCK
     }
-    public AnimalKind getKind(){
+
+    public AnimalKind getKind() {
         return AnimalKind.ANIMAL;
     }
-    public enum FoodKind {
+
+    enum FoodKind {
         UNKNOWN,
         HAY,
         CORN
     }
-    public FoodKind  getFoodKind(){
+
+    public FoodKind getFoodKind() {
         return FoodKind.UNKNOWN;
     }
-    public double  getWeight(){
-        return weight;
-    }
-    public double getFoodCoeff(){
-        double ves=0.02;
-        return ves;
-    }
-    public double calculateFoodWeight(){
-        double  vese=getWeight()*getFoodCoeff();
-        return vese;
-    }
+
+    @Override
     public String toString() {
         return "I am" +" "+ getKind() + ", eat" + " "+getFoodKind();
 
     }
+
+    public double calculateFoodWeight() {
+        return weight * getFoodCoeff();
+    }
+
     public String toStringFull() {
         return "I am" +" " +getKind() + ", eat" + " "+getFoodKind() + " "+calculateFoodWeight();
     }
-    }
+}
 
 
