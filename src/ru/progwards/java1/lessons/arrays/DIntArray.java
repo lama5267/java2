@@ -3,19 +3,20 @@ package ru.progwards.java1.lessons.arrays;
 import java.util.Arrays;
 
 public class DIntArray {
+
     private int[] arr1 ;
     private int[] arr2;
     public DIntArray() {
     }
 
     public void add(int num) {//добавляет элемент num в конец массива
-        arr2 = new int[arr1.length + 1]; // меняю размер второго массива
-        for (int i : arr2 = Arrays.copyOf(arr1, arr1.length)) {
-
-        }
-        ;// во второй массив копирую первый
-        arr2[arr1.length + 1] = num;
+        arr2 = new int[arr1.length];
+        arr2 = Arrays.copyOf(arr1, arr1.length);// во второй массив копирую первый
+        arr1 = new int[arr1.length + 1]; // меняю размер первого массива
+        arr1 = Arrays.copyOf(arr2, arr2.length + 1);// второй массив копирую обратно в первый
+        arr1[arr1.length - 1] = num;  // наконец, в первом прописываю в последний элемент значение num
     }
+
 
     public void atInsert(int pos, int num) {     // Добавить элемент num в pos - позицию в массиве
         int[] arr3 = new int[arr1.length - pos]; //  создадим новый, буферный массив.
@@ -48,9 +49,12 @@ public class DIntArray {
     }
 
     public int at(int pos) {
-
+        if (arr1.length == 0) {
+            return arr1[0];
+        } else {
             return arr1[pos];
         }
+    }
 
 
 
