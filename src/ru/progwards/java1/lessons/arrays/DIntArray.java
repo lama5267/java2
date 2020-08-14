@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class DIntArray {
 
-    private int[] arr1 ;
+    private int[] arr1 = new int[0];
     private int[] arr2;
     public DIntArray() {
     }
