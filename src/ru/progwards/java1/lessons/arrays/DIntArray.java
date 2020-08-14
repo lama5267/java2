@@ -9,11 +9,9 @@ public class DIntArray {
     }
 
     public void add(int num) {//добавляет элемент num в конец массива
-        arr2 = new int[arr1.length];
+        arr2 = new int[arr1.length + 1]; // меняю размер второго массива
         arr2 = Arrays.copyOf(arr1, arr1.length);// во второй массив копирую первый
-        arr1 = new int[arr1.length + 1]; // меняю размер первого массива
-        arr1 = Arrays.copyOf(arr2, arr2.length + 1);// второй массив копирую обратно в первый
-        arr1[arr1.length - 1] = num;  // наконец, в первом прописываю в последний элемент значение num
+        arr2[arr1.length - 1] = num;  // наконец, во втором прописываю в последний элемент значение num
     }
 
     public void atInsert(int pos, int num) {     // Добавить элемент num в pos - позицию в массиве
