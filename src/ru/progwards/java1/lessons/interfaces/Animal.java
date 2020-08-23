@@ -3,6 +3,7 @@ package ru.progwards.java1.lessons.interfaces;
 public class Animal implements FoodCompare, CompareWeight {
 
 
+
     enum AnimalKind {
         ANIMAL, COW, HAMSTER, DUCK
     }
@@ -32,16 +33,16 @@ public class Animal implements FoodCompare, CompareWeight {
     }
     public AnimalKind getKind() {
         return AnimalKind.ANIMAL;
-    }                   //1
+    }
 
     public FoodKind getFoodKind() {
         return FoodKind.UNKNOWN;
-    }                  //1
+    }
 
     @Override
-    public CompareResult compareWeight(CompareWeight smthHasWeigt) {                //через if
-        Animal otherAnimal = (Animal) smthHasWeigt;
-        int doubcom = Double.compare(this.getWeight(), otherAnimal.getWeight());             //2
+    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
+        Animal animal = (Animal) smthHasWeigt;
+        int doubcom = Double.compare(this.getWeight(), animal.getWeight());
         switch (doubcom) {
             case (-1):
                 return CompareWeight.CompareResult.LESS;
@@ -105,9 +106,9 @@ public class Animal implements FoodCompare, CompareWeight {
     public static void main(String[] args) {
         Cow mu = new Cow(500);
         Duck kra = new Duck(7);
-        Food meat = new Food(10);
-        System.out.println(mu.compareWeight(meat));
+        Hamster meat = new Hamster(10);
+        System.out.println(mu.compareWeight(mu));
         System.out.println(mu.compareWeight(kra));
-        System.out.println(kra.compareWeight(meat));
+        System.out.println(mu.compareWeight(meat));
     }
 }
