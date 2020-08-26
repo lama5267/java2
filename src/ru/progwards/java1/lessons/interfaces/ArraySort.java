@@ -12,16 +12,16 @@ public class ArraySort implements CompareWeight {
     }
 
     public static void sort(CompareWeight[] a) {
-        for (int i = 0; i < a.length; i++) {
-            for (int j = i + 1; j < a.length; j++) {
-                CompareWeight c;
-                if (a[i].getWeight() > a[j].getWeight()) {
-                    c = a[i];
+        CompareWeight a1;
+        for (int i=0; i<a.length; i++) {
+            for (int j=i+1; j<a.length; j++) {
+                if (a[i].compareWeight(a[j]) == CompareWeight.CompareResult.GREATER) {
+                    a1 = a[i];
                     a[i] = a[j];
-                    a[j] = c;
+                    a[j] = a1;
                 }
             }
-
         }
     }
+
 }
