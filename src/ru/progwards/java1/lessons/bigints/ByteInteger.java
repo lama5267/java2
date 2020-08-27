@@ -7,13 +7,11 @@ class ByteInteger extends AbsInteger {
         this.num = num;
     }
 
+
     @Override
     public String toString() {
         return "ByteInteger{" +
                 "num=" + num +
                 '}';
-    }
-    public byte anByteGetNum(int num) {
-        return (byte) num;
     }
 }

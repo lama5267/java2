@@ -13,7 +13,4 @@ class ShortInteger extends AbsInteger {
                 "num=" + num +
                 '}';
     }
-    public short anShortGetNum(int num) {
-        return (short) num;
-    }
 }

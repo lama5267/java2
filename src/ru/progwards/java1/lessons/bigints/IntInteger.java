@@ -13,8 +13,5 @@ class IntInteger extends AbsInteger {
                 "num=" + num +
                 '}';
     }
-    public int anIntGetNum(int num) {
-        return (int) num;
-    }
 
 }
