@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class BigAlgebra {
-    BigDecimal fastPow(BigDecimal num, int pow) {
+  static  BigDecimal fastPow(BigDecimal num, int pow) {
         if (pow == 0) return BigDecimal.valueOf(1);        //проверка нулевой степени
         String stepen = Integer.toString(pow, 2);      //представление степени двоичным числом
         BigDecimal resul = (num);             //инициализация результата НУЛЕМ
@@ -16,7 +16,7 @@ public class BigAlgebra {
         return resul;
     }
 
-    BigInteger fibonacci(int n) {
+   static BigInteger fibonacci(int n) {
         BigInteger i1 = BigInteger.valueOf(1);
         BigInteger i2 = BigInteger.valueOf(1);
         BigInteger i3 = BigInteger.valueOf(0);
