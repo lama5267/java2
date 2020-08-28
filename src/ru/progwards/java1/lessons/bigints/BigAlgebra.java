@@ -4,17 +4,23 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class BigAlgebra {
-  static      BigDecimal fastPow(BigDecimal num, int pow) {
-      if (pow == 0) return BigDecimal.valueOf(1);        //проверка нулевой степени
-      String BYNPOW = Integer.toString(pow, 2);      //представление степени двоичным числом
-      BigDecimal res = (num);             //инициализация результата НУЛЕМ
-      for (int i = BYNPOW.length() - 1; i > 0; i--) {    //цикл перебора от СТАРШЕГО бита к МЛАДШЕМУ
-          if (BYNPOW.charAt(i) == '1') {                  //считывание значения бита
-              res = (res.multiply(res)).multiply(num);
-          } else res = res.multiply(res);
-      }
-      return res;
-  }
+    static BigDecimal fastPow(BigDecimal num, int pow) {   //num число, pow степень
+
+        BigDecimal p = BigDecimal.ONE;
+
+        while (pow != 0) {
+            if (pow % 2 == 0) {
+                pow = pow / 2;
+                num = num.multiply(num);
+            } else {
+                pow--;
+                p = num.multiply(p);
+            }
+        }
+        return p;
+
+    }
+
 
 
     static BigInteger fibonacci(int n) {
@@ -35,7 +41,7 @@ public class BigAlgebra {
     public static void main(String[] args) {
 
         BigAlgebra algebra = new BigAlgebra();
-        System.out.println(algebra.fastPow(BigDecimal.valueOf(3), 5));
+        System.out.println(algebra.fastPow(BigDecimal.valueOf(3), 7));
         System.out.println(algebra.fibonacci(8));
 
     }

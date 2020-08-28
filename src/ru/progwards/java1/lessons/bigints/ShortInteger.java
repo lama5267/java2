@@ -9,8 +9,9 @@ class ShortInteger extends AbsInteger {
 
     @Override
     public String toString() {
-        return "ShortInteger{" +
-                "num=" + num +
-                '}';
+        String result = "";
+        result += num ;
+        return result;
+
     }
 }
