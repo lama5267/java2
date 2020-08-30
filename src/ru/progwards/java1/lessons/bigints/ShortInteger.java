@@ -1,5 +1,7 @@
 package ru.progwards.java1.lessons.bigints;
 
+import java.math.BigInteger;
+
 class ShortInteger extends AbsInteger {
     short  num;
 
@@ -9,9 +11,13 @@ class ShortInteger extends AbsInteger {
 
     @Override
     public String toString() {
-        String result = "";
-        result += num ;
-        return result;
+        return String.valueOf(num);
+    }
 
+
+    @Override
+    public BigInteger value() {
+
+        return new BigInteger(this.toString());
     }
 }
