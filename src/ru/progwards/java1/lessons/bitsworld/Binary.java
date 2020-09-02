@@ -6,20 +6,16 @@ public class Binary {
         this.num = num;
 
     }
-        @Override
-        public String toString() {
-            String result = "";
-            result += (num >> 7) & 0b00000001;
-            result += (num >> 6) & 0b00000001;
-            result += (num >> 5) & 0b00000001;
-            result += (num >> 4) & 0b00000001;
-            result += (num >> 3) & 0b00000001;
-            result += (num >> 2) & 0b00000001;
-            result += (num >> 1) & 0b00000001;
-            result += (num >> 0) & 0b00000001;
-            return result;
+    public String toString(){
+        String str="";
+        for (int i=0; i<=7;i++){
+            str=(num & 1) +str;
+            num>>=1;
         }
+        return str;
+    }
 
     public static void main(String[] args) {
+        System.out.println(new Binary((byte)55).toString());
     }
 }
