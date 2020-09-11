@@ -7,5 +7,17 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://C:/бот" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://C:/бот" />
+        </SOURCES>
+        <jarDirectory url="file://C:/бот" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
