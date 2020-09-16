@@ -20,7 +20,7 @@ public class SetOperations {
                 return set;
             }
                 public static Set<Integer> symDifference(Set<Integer> set1, Set<Integer> set2)    {
-                    Set<Integer> set=new HashSet<>(set1);
+                    Set<Integer> set = difference(set1, set2);
                     set.addAll(difference(set2, set1));//        - симметрическая разница
                     return set;
                 }

@@ -7,22 +7,22 @@ import java.util.TreeSet;
 
 public class LettersInFile  {
     public static String process(String fileName) throws IOException {
-        String rez = "";
-        TreeSet<Character> temp = new TreeSet<>();
-        try(FileReader reader = new FileReader(fileName)){
-            Scanner scann = new Scanner(reader);
+        String str = "";
+        TreeSet<Character> temp = new TreeSet<>();//множество Character
+        try(FileReader reader = new FileReader(fileName)){//прочитываем файл
+            Scanner scann = new Scanner(reader);//прочитаем при помощи сканера
             while(scann.hasNext()){
-                String str = scann.nextLine();
-                char[] charStr = str.toCharArray();
+                String str1 = scann.nextLine();
+                char[] charStr = str1.toCharArray();
                 for(int i = 0; i < charStr.length; i++){
                     temp.add(charStr[i]);
                 }
             }
         }
         for(Character s:temp)
-            if(Character.isLetter(s))
-                rez += s;
-        return rez;
+            if(Character.isLetter(s))//  если  символ буква то
+                str += s;
+        return str;
     }
     public static void main(String[] args) throws IOException {
         String process;
