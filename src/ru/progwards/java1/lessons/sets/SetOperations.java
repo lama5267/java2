@@ -19,14 +19,17 @@ public class SetOperations {
                 set.removeAll(set2);// удаляем только элементы  set2      - разница множеств
                 return set;
             }
-                public static Set<Integer> symDifference(Set<Integer> set1, Set<Integer> set2)    {
-                    Set<Integer> set = difference(set1, set2);
-                    set.addAll(difference(set2, set1));//        - симметрическая разница
-                    return set;
-                }
+    public static Set<Integer> symDifference(Set<Integer> set1, Set<Integer> set2){
+        Set<Integer> set = new HashSet<Integer>(set1);
+        set.addAll(set2);// добавляем все  элементы  set2
+        Set<Integer> tmp = new HashSet<Integer>(set1);
+        tmp.retainAll(set2);//пересечение множеств
+        set.removeAll(tmp);// удаляем только элементы  tmp
+        return set;
+    }
     public static void main(String[] args) {
-        Set<Integer> set1 = Set.of(1, 3, 5, 7, 9);
-        Set<Integer> set2 = Set.of(1, 4, 5, 8, 13);
+        Set<Integer> set1 = Set.of(0,4,5,6,8,9,10);
+        Set<Integer> set2 = Set.of(0,1,2,4,5,8,10);
         System.out.println(set1);
         System.out.println(set2);
         System.out.println("union - " + union(set1, set2));
