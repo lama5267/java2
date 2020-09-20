@@ -50,7 +50,13 @@ public class SeaBattleAlg {
                     SeaBattle.FireResult fireResult = seaBattle.fire(x, y);
                     if (fireResult != FireResult.MISS) {
                         hits++;
-                        if (fireResult == FireResult.DESTROYED) {
+                        if (fireResult == FireResult.HIT) {
+                            field[x][y] = 'X';
+                            field[x + 1][y + 1] = 'X';
+
+                        }
+
+                            if (fireResult == FireResult.DESTROYED) {
                             field[x][y] = 'X';
                             field[x + 1][y] = 'X';
                             field[x][y + 1] = 'X';
@@ -86,6 +92,6 @@ public class SeaBattleAlg {
 
     // функция для отладки
     public static void main(String[] args) {
-        test();
+        comp();
     }
 }
