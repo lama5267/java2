@@ -14,8 +14,8 @@ public class CollectionsSort {
                 }
             }
         }
-        data.clear();
-        data.addAll(list);
+        data.clear();//отчищаем коллекцию
+        data.addAll(list);//добавляем все элементы
     }
 
     public static void minSort(Collection<Integer> data){
@@ -29,7 +29,8 @@ data.clear();//отчищаем коллекцию
 data.addAll(novcol);//добавляем все элементы
     }
     static void collSort(Collection<Integer> data){
-        Collections.sort((List) data);
+
+        Collections.sort((List) data);//метод sort из Collections
     }
 
     static class CompMetod {
@@ -107,23 +108,13 @@ data.addAll(novcol);//добавляем все элементы
     }
     public static void main(String[] args) {
         Collection<Integer> cal = new ArrayList<>();
-
-        cal.add(37);
-        cal.add(52);
-        cal.add(02);
-        cal.add(77);
-        cal.add(49);
-        cal.add(34);
-
-
+        cal.add(22);
+        cal.add(55);
+        cal.add(70);
         collSort(cal);
-        System.out.println("       coll               =" + cal);
-
-
-        for (int i = 0; i < 6; i++) {
+        System.out.println("coll =" + cal);
+        for (int i = 0; i < 3; i++) {
             System.out.println(compareSort());
         }
-
-
     }
 }

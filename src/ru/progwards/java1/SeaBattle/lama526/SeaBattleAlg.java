@@ -56,7 +56,7 @@ public class SeaBattleAlg {
 
                         }
 
-                            if (fireResult == FireResult.DESTROYED) {
+                        if (fireResult == FireResult.DESTROYED) {
                             field[x][y] = 'X';
                             field[x + 1][y] = 'X';
                             field[x][y + 1] = 'X';
