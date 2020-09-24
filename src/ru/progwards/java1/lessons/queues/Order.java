@@ -9,7 +9,6 @@ public class Order {
         this.sum = sum;
         num = numm();
     }
-
     public double getSum() {
         return sum;
     }
