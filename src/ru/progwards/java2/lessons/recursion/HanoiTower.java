@@ -16,17 +16,17 @@ int pos;
             to = 3;
             middle = 2;
         }
-        movePartOfTower(size, from, to, middle);
+        movePartOfTower(size, from, to, middle);//рекурсия вызов movePartOfTower
     }
     public void movePartOfTower(int n, int from, int to, int middle) {
         if (n == 0)
             return;
 
-        movePartOfTower(n - 1, from, middle, to);
+        movePartOfTower(n - 1, from, middle, to);//рекурсия
 
         System.out.println(from + " " + to);
 
-        movePartOfTower(n - 1, middle, to, from);
+        movePartOfTower(n - 1, middle, to, from);//рекурсия
     }
 
     public void print() {
