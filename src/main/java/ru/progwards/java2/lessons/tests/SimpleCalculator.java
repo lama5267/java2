@@ -1,4 +1,4 @@
-package ru.progwards.java2.lessons.tests.calc;
+package ru.progwards.java2.lessons.tests;
 
 import app.IntOverflowException;
 
