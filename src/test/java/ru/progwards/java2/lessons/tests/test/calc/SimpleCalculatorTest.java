@@ -8,7 +8,8 @@ import ru.progwards.java2.lessons.tests.calc.SimpleCalculator;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 @RunWith(Enclosed.class)
 public class SimpleCalculatorTest {
     @RunWith(Parameterized.class)
